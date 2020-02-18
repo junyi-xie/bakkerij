@@ -101,6 +101,7 @@
 
 .openingstijden-text {
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 .location {
@@ -117,6 +118,7 @@
 
 .location-text {
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 .contact {
@@ -133,6 +135,7 @@
 
 .contact-text {
   font-size: 16px;
+  font-family: sans-serif;
 }
 
 .links {
@@ -149,6 +152,7 @@
 
 .links-text {
   font-size: 16px;
+  font-family: sans-serif;
 }
 .remove-decoration {
   color: black;
