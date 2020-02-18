@@ -94,7 +94,8 @@
 
 .openingstijden-title {
   margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 19px;
+  font-family: sans-serif;
 }
 
 .openingstijden-text {
@@ -109,7 +110,8 @@
 
 .location-title {
   margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 19px;
+  font-family: sans-serif;
 }
 
 .location-text {
@@ -124,7 +126,8 @@
 
 .contact-title {
   margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 19px;
+  font-family: sans-serif;
 }
 
 .contact-text {
@@ -139,9 +142,14 @@
 
 .links-title {
   margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 19px;
+  font-family: sans-serif;
 }
 
 .links-text {
   font-size: 16px;
+}
+.remove-decoration {
+  color: black;
+  font-size: 18px;
 }
