@@ -2,6 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+// $products = "SELECT * FROM `products`";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=bakkerij_leiden", $username, $password);
@@ -60,6 +61,10 @@ catch(PDOException $e)
         </header>
     </header>
 
+    <?php 
+        echo "SELECT * FROM 'products'";
+        
+    ?>
 
     <footer class="footer-main">
         <footer class="footer-left">
