@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-main {
+  margin-top: 10px;
+  width: 100%;
+  height: 80px;
+  background-color: #e54160;
+}
+
+.header-left {
+  width: 29%;
+  height: 80px;
+  float: left;
+  background-color: white;
+}
+
+.header-center {
+  width: 40%;
+  height: 80px;
+  float: left;
+}
+
+.header-right {
+  width:31%;
+  height: 80px;
+  float: left;
+}
+
+.logo {
+  width: 240px;
+  height: 80px;
+  float: left;
+}
+
+.red-stripe {
+  transform: skew(-19.5deg);
+  background-color: #e54160;
+  width: 185px;
+  height: 80px;
+  float: left;
+}
+
+.text {
+  text-align: center;
+}
+
+.fill {
+  background-color: #e54160;
+  position: absolute;
+  left: 400px;
+  width: 50px;
+  height: 80px;
+}
+
+.footer-main {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #e54160;
+}
+
+.footer-left {
+  width: 34.5%;
+  height: 100px;
+  float: left;
+  padding-left: 5px;
+}
+
+.footer-center {
+  width: 30%;
+  height: 100px;
+  float: left;
+}
+
+.footer-right {
+  width: 35%;
+  height: 100px;
+  float: left;
+}
+
+.banner {
+  height: 100px;
+  text-align: center;
+}
+
+.openingstijden {
+  height: 100px;
+  float: left;
+  width: 200px;
+}
+
+.openingstijden-title {
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.openingstijden-text {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.location {
+  height: 100px;
+  float: left;
+  width: 200px;
+}
+
+.location-title {
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.location-text {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.contact {
+  height: 100px;
+  float: left;
+  width: 200px;
+}
+
+.contact-title {
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.contact-text {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.links {
+  height: 100px;
+  float: left;
+  width: 200px;
+}
+
+.links-title {
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.links-text {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.remove-decoration {
+  color: black;
+  font-size: 18px;
+}
