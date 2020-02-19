@@ -24,9 +24,13 @@
 }
 
 .header-right {
-  width:31%;
-  height: 80px;
+  width:20%;
+  height: 20px;
   float: left;
+  width: 170px;
+  border: 8px solid black;
+  padding: 15px;
+  margin: 10px;
 }
 
 .logo {
