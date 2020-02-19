@@ -5,9 +5,9 @@ $password = "";
 // $products = "SELECT * FROM `products`";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=bakkerij_leiden", $username, $password);
+    $db = new PDO("mysql:host=$servername;dbname=bakkerij_leiden", $username, $password);
     // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
     }
 catch(PDOException $e)
@@ -62,7 +62,14 @@ catch(PDOException $e)
     </header>
 
     <?php 
-        echo "SELECT * FROM 'products'";
+        $stmt = $db->query("SELECT * from products");
+        while ($row = $stmt->fetch())
+        {
+            echo "<br>id:" . $row['id'] . "\n" . "<br>";
+            echo "name:" . $row['name'] . "\n". "<br>";
+            echo "description:" . $row['description'] . "\n". "<br>";
+            echo "price:" . $row['price'] . "\n". "<br>";
+        }
         
     ?>
 
