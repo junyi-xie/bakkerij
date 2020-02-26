@@ -120,12 +120,13 @@ body {
 
 .cart table {
   width: 100%;
-  color: #3a0f49;
 }
 
 .cart table thead td {
   padding: 30px 0;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #e4eeee;
+  color: #3a0f49;
+  font-weight: 500;
 }
 
 .cart table thead td:last-child {
@@ -146,7 +147,7 @@ body {
 }
 
 .cart table .remove {
-  color: #777777;
+  color: #000;
   font-size: 12px;
   padding-top: 3px;
 }
@@ -155,26 +156,39 @@ body {
   text-decoration: underline;
 }
 
+.cart table .description {
+  color: #3a0f49;
+  width: 400px;
+}
+
 .cart table .price {
-  color: #999999;
+  color: #3a0f49;
 }
 
 .cart table a {
   text-decoration: none;
-  color: #555555;
+  color: #3a0f49;
+}
+
+.cart table a:hover {
+  text-decoration: underline;
 }
 
 .cart table input[type="number"] {
-  width: 68px;
+  outline: none;
+  width: 50px;
   padding: 10px;
   border: 1px solid #ccc;
-  color: #555555;
+  color: #3a0f49;
   border-radius: 5px;
+  background-color: #f3f4f7;
 }
 
 .cart .subtotal {
   text-align: right;
   padding: 40px 0;
+  color: #3a0f49;
+  font-weight: 500;
 }
 
 .cart .subtotal .text {
@@ -184,7 +198,6 @@ body {
 
 .cart .subtotal .price {
   font-size: 18px;
-  color: #999999;
 }
 
 .cart .buttons {
@@ -196,16 +209,18 @@ body {
   margin-left: 5px;
   padding: 12px 20px;
   border: 0;
-  background: #4e5c70;
+  background-color: #3a0f49;
   color: #ffffff;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 4px;
+  outline: none;
 }
 
 .cart .buttons input[type="submit"]:hover {
-  background: #434f61;
+  background-color: #e54160;
+  transition: all 0.3s ease;
 }
 
 /* END SHOP STYLE */

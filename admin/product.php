@@ -18,7 +18,7 @@ if($con === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 // Attempt select query execution
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM shop";
 if($result = mysqli_query($con, $sql)){
   if(mysqli_num_rows($result) > 0){
 ?>
@@ -57,7 +57,7 @@ if($result = mysqli_query($con, $sql)){
           <th>Name</th>
           <th>Description</th>
           <th>Price</th>
-          <th>Amount</th>
+          <th>Quantity</th>
         </tr>
       </thead>
 
@@ -70,9 +70,9 @@ if($result = mysqli_query($con, $sql)){
         <tr>
           <td> <?=$row['id']?> </td>
           <td> <?=$row['name']?> </td>
-          <td> <?=$row['description']?> </td>
+          <td> <?=$row['desc']?> </td>
           <td> <?=$currency, $row['price']?> </td>
-          <td> <?=$row['amount']?> </td>
+          <td> <?=$row['quantity']?> </td>
         </tr>
 
       <?php 

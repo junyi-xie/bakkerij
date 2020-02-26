@@ -31,7 +31,7 @@
 
       <!-- Return to the home page if you do not want to login -->
       <span class="return">    
-      <a href="/bakkerij/home.php">want to return?</a>
+      <a href="/bakkerij/index.php">want to return?</a>
       </span>
 
     </div>
