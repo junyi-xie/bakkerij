@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
   <div class="box">
     <div class="product">
       <p><a href="product.php">Products</a> - view your current products 
-      saved in the database, amount, price, name and description.</p>
+      saved in the database, quantity, price, name and description.</p>
     </div>
   </div>
 

@@ -55,6 +55,16 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
     exit;
 }
 
+// !IMPORTANT Send the user to the place order page if they click the Place Order button, also the cart should not be empty.
+if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+  $sql = "UPDATE shop SET quantity = quantity - 1 WHERE id = 1";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$_POST['placeorder']]);
+  session_destroy();
+  header('Location: index.php');
+  exit;
+}
+
 // Check the session variable for products in cart
 $products_in_cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 $products = array();
@@ -88,7 +98,7 @@ if ($products_in_cart) {
 </head>
 <body>
 
-<!-- Main header. 1140 width centered. -->
+<!-- Main header. 1140px width centered. -->
 <header class="main">
   <div class="item">
     <h1><a href="index.php">Bakkerij Leiden</a></h1>
@@ -97,6 +107,7 @@ if ($products_in_cart) {
   </div>
 </header>
 
+<!-- The products from the database heading. -->
 <div class="container">
   <h2>Shopping Cart</h2>
   <div class="cart">
@@ -116,8 +127,8 @@ if ($products_in_cart) {
         <tbody>
         <?php if (empty($products)): ?>
           <tr>
-            <td colspan="5" style="text-align:center;">
-            You have no products added in your Shopping Cart
+            <td colspan="5" style="text-align: center;">
+            <span>You have no products added in your Shopping Cart</span>
             </td>
             </tr>
             <?php else: ?>
@@ -125,7 +136,7 @@ if ($products_in_cart) {
             <tr>
               <td class="img">
                 <a href="index.php?page=product&id=<?=$product['id']?>">
-                  <img src="imgs/<?=$product['img']?>" width="50" height="50" alt="<?=$product['name']?>"/>
+                  <img src="imgs/<?=$product['img']?>" width="80" height="50" alt="<?=$product['name']?>"/>
                 </a>
               </td>
               <td>
@@ -133,7 +144,7 @@ if ($products_in_cart) {
                   <br/>
                 <a href="index.php?page=cart&remove=<?=$product['id']?>" class="remove">Remove</a>
               </td>
-              <td class="description"><?=$product['desc']?></td>
+              <td class="description"><?=$product['product_desc']?></td>
               <td class="price">&euro;<?=$product['price']?></td>
               <td class="quantity">
                 <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required />
@@ -153,7 +164,7 @@ if ($products_in_cart) {
         <span class="price">&euro;<?=$subtotal?></span>
       </div>
       
-      <!-- !IMPORTANT Button for finishing your payment. Redirects to Mollie. Work in progress. 2/24/2020. -->
+      <!-- //!IMPORTANT Button for finishing your payment. Redirects to Mollie. Work in progress. 2/24/2020. -->
       <div class="buttons">
         <input type="submit" value="Update" name="update" />
         <input type="submit" value="Payment" name="placeorder" />

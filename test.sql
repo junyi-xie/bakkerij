@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2020 at 12:09 PM
+-- Generation Time: Feb 28, 2020 at 11:45 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -56,17 +56,18 @@ CREATE TABLE `shop` (
   `price` decimal(10,2) NOT NULL,
   `quantity` int(11) NOT NULL,
   `img` text NOT NULL,
-  `date_added` datetime NOT NULL DEFAULT current_timestamp()
+  `date_added` datetime NOT NULL DEFAULT current_timestamp(),
+  `product_desc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `shop`
 --
 
-INSERT INTO `shop` (`id`, `name`, `desc`, `price`, `quantity`, `img`, `date_added`) VALUES
-(1, 'Big Bread', 'lekker test test hallo test cake test test test test', '4.99', 9, 'bread.jpg', '2020-02-20 23:59:59'),
-(2, 'Small Bread', 'test test test', '7.49', 34, 'bread.jpg', '2020-02-20 23:59:58'),
-(3, 'Medium Bread', 'test test test', '9.99', 23, 'bread.jpg', '2020-02-20 23:59:57');
+INSERT INTO `shop` (`id`, `name`, `desc`, `price`, `quantity`, `img`, `date_added`, `product_desc`) VALUES
+(1, 'Small Bread', '<p>LET OP! Kan <a href=\"https://www.voedingscentrum.nl/encyclopedie/allergenen.aspx\" target=\"_blank\">allergenen</a> bevatten!</p>\r\n<ul>\r\n<li>Kleinbrood (bijvoorbeeld bolletjes)</li>\r\n<li>Grootbrood (bijvoorbeeld hele broden)</li>\r\n<li>Koekjes</li>\r\n<li>Gebakjes</li>\r\n<li>Cakes</li>\r\n<li>Chocolade & bonbons</li>\r\n<li>Marsepein</li>\r\n<li>Stukswerk (bijvoorbeeld gevulde koeken)</li>\r\n</ul>\r\n', '4.99', 9, 'bread.jpg', '2020-02-20 23:59:57', 'Small Bread! Very cheap!'),
+(2, 'Medium Bread', '<p>LET OP! Kan <a href=\"https://www.voedingscentrum.nl/encyclopedie/allergenen.aspx\" target=\"_blank\">allergenen</a> bevatten!</p>\r\n<ul>\r\n<li>Kleinbrood (bijvoorbeeld bolletjes)</li>\r\n<li>Grootbrood (bijvoorbeeld hele broden)</li>\r\n<li>Koekjes</li>\r\n<li>Gebakjes</li>\r\n<li>Cakes</li>\r\n<li>Chocolade & bonbons</li>\r\n<li>Marsepein</li>\r\n<li>Stukswerk (bijvoorbeeld gevulde koeken)</li>\r\n</ul>', '7.49', 34, 'bread.jpg', '2020-02-20 23:59:58', 'Medium Bread! Also very cheap!'),
+(3, 'Large Bread', '<p>LET OP! Kan <a href=\"https://www.voedingscentrum.nl/encyclopedie/allergenen.aspx\" target=\"_blank\">allergenen</a> bevatten!</p>\r\n<ul>\r\n<li>Kleinbrood (bijvoorbeeld bolletjes)</li>\r\n<li>Grootbrood (bijvoorbeeld hele broden)</li>\r\n<li>Koekjes</li>\r\n<li>Gebakjes</li>\r\n<li>Cakes</li>\r\n<li>Chocolade & bonbons</li>\r\n<li>Marsepein</li>\r\n<li>Stukswerk (bijvoorbeeld gevulde koeken)</li>\r\n</ul>', '9.99', 23, 'bread.jpg', '2020-02-20 23:59:59', 'Big Bread! Very cheap!');
 
 --
 -- Indexes for dumped tables

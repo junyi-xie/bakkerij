@@ -25,9 +25,9 @@
     <input class="password" name="password" type="password" maxlength="20" placeholder="Password" required>
 
     <!-- Remember me option. Does not work yet -->
-    <div class="remember">
+    <div class="option">
       <input class="remembercheck" type="checkbox" name="remember" />
-      <span class="rememberspan">Remember me</span>
+      <span class="remembertext">Remember me</span>
 
       <!-- Return to the home page if you do not want to login -->
       <span class="return">    

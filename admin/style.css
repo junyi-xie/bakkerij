@@ -37,12 +37,12 @@ body {
 
 .login .heading hr {
   width: 300px;
-  border: 2px solid;
-  border-radius: 5px;
+  border: solid 2px #3a0f49;
+  border-radius: 4px;
   margin: 0 auto;
 }
 
-.username {
+.login .username {
   outline: none;
   width: 300px;
   display: table;
@@ -53,10 +53,10 @@ body {
   border: 0 none;
   background-color: #3a0f49;
   color: rgb(113, 127, 136);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.password {
+.login .password {
   outline: none;
   width: 300px;
   display: table;
@@ -67,65 +67,44 @@ body {
   border: 0 none;
   background-color: #3a0f49;
   color: rgb(113, 127, 136);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.username:hover,
-.password:hover {
-  color: rgb(113, 127, 136);
-}
-
-.username:focus,
-.password:focus {
+.login .username:focus,
+.login .password:focus {
   color: rgb(113, 127, 136);
   background-color: #3a0f49;
   width: 350px;
-  border-radius: 5px;
-  transition: 0.6s;
+  border-radius: 4px;
+  transition: all 0.6s ease;
 }
 
-.username:not(focus),
-.password:not(focus) {
-  transition: 0.6s;
+.login .username:not(focus),
+.login .password:not(focus) {
+  transition: all 0.6s ease;
 }
 
-.remember {
+.login .option {
   width: 300px;
   margin: auto;
 }
 
-.remembercheck {
+.login .option .remembercheck {
   margin-top: 4px;
   margin-left: -20px;
   float: left;
   outline: none;
 }
 
-.remembercheck:hover {
+.login .option .remembercheck:hover {
   cursor: pointer;
 }
 
-.rememberspan {
+.login .option .remembertext {
   color: rgb(113, 127, 136);
 }
 
-.remembercheck:checked + .rememberspan {
-  outline: none;
-  color: #3a0f49;
-  transition: 0.6s;
-}
-
-.rememembercheck:not(checked) + .rememberspan {
-  color: rgb(113, 127, 136);
-  transition: 0.6s;
-}
-
-.return a {
-  text-decoration: none;
-  color: rgb(113, 127, 136);
-}
-
-.return {
+.login .option .return {
   float: right;
   margin-right: -20px;
   color: rgb(113, 127, 136);
@@ -133,13 +112,18 @@ body {
   font-style: italic;
 }
 
-.return:hover {
+.login .option .return a {
+  text-decoration: none;
+  color: rgb(113, 127, 136);
+}
+
+.login .option .return a:hover {
   color: rgb(113, 127, 136);
   text-decoration: underline;
   cursor: pointer;
 }
 
-.submit {
+.login .submit {
   outline: none;
   display: table;
   margin: 40px auto;
@@ -150,24 +134,23 @@ body {
   text-transform: uppercase;
   background-color: #3a0f49;
   color: rgb(113, 127, 136);
-  border-radius: 5px;
-  border: 5px none rgb(0, 18, 30);
+  border-radius: 4px;
+  border: 0 none;
 }
 
 .submit:hover {
   outline: none;
-  border-radius: 5px;
+  border-radius: 4px;
   width: 120px;
   cursor: pointer;
   color: rgb(113, 127, 136);
   background-color: #3a0f49;
-  transition: 0.2s;
+  transition: all 0.3s ease;
 }
 
 .submit:not(hover) {
   color: rgb(113, 127, 136);
-  border: 5px none rgb(0, 18, 30);
-  transition: 0.6s;
+  transition: all 0.6s ease;
 }
 
 /* END LOGIN STYLE */
@@ -221,6 +204,7 @@ body {
 
 .navtop .item a:hover {
   color: #e54160;
+  transition: all 0.4s ease;
 }
 
 /* END HEADER STYLE */
@@ -285,6 +269,7 @@ body {
 .content .time a:hover {
   text-decoration: underline;
   color: #e54160;
+  transition: all 0.4s ease;
 }
 
 /* END CONTENT STYLE */
@@ -349,14 +334,17 @@ body {
 
 .list table tbody tr:hover {
   background-color: #3a0f49;
+  transition: all 0.4s ease;
 }
 
 .list table tbody tr:hover td {
   color: #ffffff;
+  transition: all 0.4s ease;
 }
 
 .list table tbody tr:hover td:nth-child(1) {
   color: #ffffff;
+  transition: all 0.4s ease;
 }
 
 .list table tbody tr td {

@@ -22,13 +22,14 @@ if (isset($_GET['id'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Bakkerij Leiden</title>
+  <title><?=$product['name']?> - Bakkerij Leiden</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css" />          
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
 </head>
 <body>
 
+<!-- Main header. Contains the shopping cart and admin login. -->
 <header class="main">
   <div class="item">
     <h1><a href="index.php">Bakkerij Leiden</a></h1>
@@ -37,25 +38,25 @@ if (isset($_GET['id'])) {
   </div>
 </header>
 
-<div class="product content-wrapper">
-    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
-    <div>
-        <h1 class="name"><?=$product['name']?></h1>
-        <span class="price">
-            &dollar;<?=$product['price']?>
-           
-        </span>
+<!-- Container for the display of the products. -->
+<div class="container">
+  <h2>Product</h2>
+  <div class="product">
+    <img src="imgs/<?=$product['img']?>" width="500" height="400" alt="<?=$product['name']?>">
+    <div class="wrapper">
+      <h1><?=$product['name']?></h1>
+      <span class="price">&euro;<?=$product['price']?></span>
+      <div class="description"><?=$product['desc']?></div>
         <form action="index.php?page=cart" method="post">
-            <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
-            <input type="hidden" name="product_id" value="<?=$product['id']?>">
-            <input type="submit" value="Add To Cart">
+          <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+          <input type="hidden" name="product_id" value="<?=$product['id']?>">
+          <input type="submit" value="Add To Cart">
         </form>
-        <div class="description">
-            <?=$product['desc']?>
-        </div>
     </div>
+  </div>
 </div>
 
+<!-- Copyright -->
 <div class="copyright">
   <?php echo "<p>All rights reserved " . date("Y") . " &copy; Bakkerij Leiden</p>";?>
 </div>

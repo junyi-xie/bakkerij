@@ -70,7 +70,7 @@ if($result = mysqli_query($con, $sql)){
         <tr>
           <td> <?=$row['id']?> </td>
           <td> <?=$row['name']?> </td>
-          <td> <?=$row['desc']?> </td>
+          <td> <?=$row['product_desc']?> </td>
           <td> <?=$currency, $row['price']?> </td>
           <td> <?=$row['quantity']?> </td>
         </tr>
