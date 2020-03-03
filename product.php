@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?=$product['name']?> - Bakkerij Leiden</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="style.css" />          
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
 </head>
 <body>
@@ -34,7 +34,7 @@ if (isset($_GET['id'])) {
   <div class="item">
     <h1><a href="index.php">Bakkerij Leiden</a></h1>
     <a href="admin/login.php"><i class="fas fa-users"></i>Admin</a>
-    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
+    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Winkelwagen</a>
   </div>
 </header>
 
@@ -63,4 +63,3 @@ if (isset($_GET['id'])) {
 
 </body>
 </html>
-

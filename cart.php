@@ -91,7 +91,7 @@ if ($products_in_cart) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Cart - Bakkerij Leiden</title>
+  <title>Winkelwagen - Bakkerij Leiden</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
@@ -103,23 +103,23 @@ if ($products_in_cart) {
   <div class="item">
     <h1><a href="index.php">Bakkerij Leiden</a></h1>
     <a href="admin/login.php"><i class="fas fa-users"></i>Admin</a>
-    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
+    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Winkelwagen</a>
   </div>
 </header>
 
 <!-- The products from the database heading. -->
 <div class="container">
-  <h2>Shopping Cart</h2>
+  <h2>Winkelwagen</h2>
   <div class="cart">
     <form action="index.php?page=cart" method="post">
       <table>
         <thead>
           <tr>
             <td colspan="2">Product</td>
-            <td>Description</td>
-            <td>Price</td>
-            <td>Quantity</td>
-            <td>Total</td>
+            <td>Descriptie</td>
+            <td>Prijs</td>
+            <td>Hoeveelheid</td>
+            <td>Totaal</td>
           </tr>
         </thead>
 
@@ -128,7 +128,7 @@ if ($products_in_cart) {
         <?php if (empty($products)): ?>
           <tr>
             <td colspan="5" style="text-align: center;">
-            <span>You have no products added in your Shopping Cart</span>
+            <span>Je hebt geen producten in je winkelwagen</span>
             </td>
             </tr>
             <?php else: ?>
@@ -160,16 +160,16 @@ if ($products_in_cart) {
 
       <!-- Displays total price. Currency is euro's. -->
       <div class="subtotal">
-        <span class="text">Subtotal</span>
+        <span class="text">Subtotaal</span>
         <span class="price">&euro;<?=$subtotal?></span>
       </div>
-      
+
       <!-- //!IMPORTANT Button for finishing your payment. Redirects to Mollie. Work in progress. 2/24/2020. -->
       <div class="buttons">
         <input type="submit" value="Update" name="update" />
         <input type="submit" value="Payment" name="placeorder" />
       </div>
-        
+
     </form>
   </div>
 </div>
