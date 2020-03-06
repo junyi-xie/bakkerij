@@ -9,9 +9,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start - Bakkerij Leiden</title>
+  <title>Home - Bakkerij Leiden</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />          
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
 </head>
 <body>
@@ -21,35 +21,33 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <div class="item">
     <h1><a href="index.php">Bakkerij Leiden</a></h1>
     <a href="admin/login.php"><i class="fas fa-users"></i>Admin</a>
-    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Winkelwagen</a>
+    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
   </div>
 </header>
 
 <!-- Container. 1140px width centered. Contains most of the items. -->
 <div class="container">
-  <h2>Start</h2>
+  <h2>Home</h2>
   <!-- Welcome message. Contains about us, location and social media. -->
   <div class="message">
-    <h3>Welkom</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam
-    ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
-    debitis nihil inventore odio est laborum quam praesentium possimus.</p>
-    <h3>Over ons</h3>
-    <p>Tijdens de opleiding leer jij alles over de uitvoering van alle keukenwerkzaamheden, 
-    de taakverdeling, toezicht houden en natuurlijk meer diepgaande kennis en vaardigheden met betrekking tot koken en bereiden van gerechten. 
-    Je kunt deze opleiding volgen wanneer je in het bezit bent van een diploma Zelfstandig Werkend Kok.</p>
-    <h3>Locatie</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam
-    ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
-    debitis nihil inventore odio est laborum quam praesentium possimus.</p>
+    <h3>Welcome</h3>
+    <p>Hallo welkom op onze pagina.
+    op deze pagina kan u uw producten bestellen vers uit onze horeca opleiding keueken 
+    .</p>
+    <h3>About Us</h3>
+    <p> Dit is de pagina van de Horeca opleiding, deze opleiding leeren we je alles over de uitvoering van alle keukenwerkzaamheden, 
+    de taakverdeling, toezicht houden en natuurlijk meer diepgaande kook kennis en vaardigheden met betrekking tot koken en bereiden van gerechten. 
+    Je kunt deze opleiding volgen wanneer je in het bezit bent van een diploma Zelfstandig Werkend Kok</p>
+    <h3>Location</h3>
+    <p>Wij zijn gevestigd in leiden op het adress : Breestraat 46, 2311 CS Leiden.</p>
     <h3>Social Media</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam
-    ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam 
+    ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias 
     debitis nihil inventore odio est laborum quam praesentium possimus.</p>
   </div>
-
+  
   <!-- Displays the products from the database. -->
-  <div class="products">
+  <div class="products"> 
   <?php foreach ($products as $product): ?>
     <!-- Container for each product box. -->
     <div class="box">
