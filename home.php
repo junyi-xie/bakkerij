@@ -35,9 +35,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
     debitis nihil inventore odio est laborum quam praesentium possimus.</p>
     <h3>Over ons</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam
-    ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
-    debitis nihil inventore odio est laborum quam praesentium possimus.</p>
+    <p>Tijdens de opleiding leer jij alles over de uitvoering van alle keukenwerkzaamheden, 
+    de taakverdeling, toezicht houden en natuurlijk meer diepgaande kennis en vaardigheden met betrekking tot koken en bereiden van gerechten. 
+    Je kunt deze opleiding volgen wanneer je in het bezit bent van een diploma Zelfstandig Werkend Kok.</p>
     <h3>Locatie</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam
     ipsam odit sed facilis similique nulla obcaecati omnis, dolores ab molestias
