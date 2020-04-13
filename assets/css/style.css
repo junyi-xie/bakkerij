@@ -1,0 +1,1858 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f4f7;
+  font-family: Overpass, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+}
+
+/* main header */
+.nav {
+  background-color: #3a0f49;
+  height: 60px;
+  width: 100%;
+  border: 0;
+}
+
+.nav .item {
+  display: flex;
+  margin: 0 auto;
+  width: 95%;
+  height: 100%;
+}
+
+/* responsive nav mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav {
+    background-color: #3a0f49;
+    height: 60px;
+    width: 100%;
+    border: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .nav .item {
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav .item {
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav .item {
+    display: flex;
+    margin: 0 auto;
+    width: 960px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .nav .item {
+    display: flex;
+    margin: 0 auto;
+    width: 1140px;
+    height: 100%;
+  }
+}
+
+/* items of the header will be align next to each other and vertically centered */
+.nav .item h1,
+.nav .item a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* the heading will float to the left while other items to the right */
+.nav .item h1 {
+  flex: 1;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* adds some padding to the items a element */
+.nav .item a {
+  padding: 0 0 0 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* mobile view for items of the nav */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav .item a {
+    padding: 0;
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .nav .item h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+/* h1 element does not need the padding */
+.nav .item h1 a {
+  padding: 0;
+}
+
+/* moves the icon a little bit further from the text */
+.nav .item a i {
+  padding: 2px 8px 0 0;
+}
+
+/* hover effect */
+.nav .item a:hover {
+  color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* the main items for the header (laptop/desktop + tablet) will be displayed */
+.nav .item a.main i.main,
+.nav .item a.main {
+  align-items: center;
+  display: flex;
+}
+
+/* the hamburger menu items will have a display none, unless in mobile view they will have display block */
+.nav .item a.sub i.sub,
+.nav .item a.sub {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* mobile view for the icons and changes display property for main and sub class */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav .item a i.fa-users,
+  .nav .item a i.fa-shopping-cart {
+    padding: 2px 10px 0 0;
+  }
+
+  .nav .item a i.fa-bars {
+    background: transparent;
+    color: #fff;
+    display: block;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav .item a.main i.main,
+  .nav .item a.main {
+    display: none;
+  }
+
+  .nav .item a.sub i.sub,
+  .nav .item a.sub {
+    align-items: center;
+    display: flex;
+  }
+}
+
+/* hamburger menu for mobile view */
+.menu {
+  overflow: hidden;
+  background-color: #3a0f49;
+  position: relative;
+  width: 100%;
+}
+
+/* items in the hamburger menu will have default display none, when toggling it will have display block */
+.menu #links {
+  display: none;
+}
+
+/* all the a element in the menu gets some styling */
+.menu a {
+  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* hover effect */
+.menu a:hover {
+  color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* 100% height, 95% width */
+.container {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* main container to hold most of the items */
+.container h2 {
+  padding: 25px 0;
+  font-size: 22px;
+  color: #3a0f49;
+  border-bottom: 1px solid #e0e0e3;
+}
+
+/* responsive container for main page mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+
+  .container h2 {
+    margin: 0;
+    padding: 85px 0 25px 0;
+    font-size: 24px;
+    color: #3a0f49;
+    border-bottom: 1px solid #e0e0e3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+
+  .container h2 {
+    padding: 25px 0 25px 0;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* mborijnland mini icon, mainly for design purpose */
+.container h2:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 24px;
+  border-left: 5px solid #e54160;
+  border-right: 5px solid #e54160;
+  transform: skew(-19.5deg);
+  margin: 0 11px -3px 6px;
+}
+
+.container .message {
+  width: 100%;
+  padding: 15px 0 0 0;
+}
+
+/* responsive view for the message class */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .message {
+    width: 100%;
+    padding: 15px 0 0 0;
+    float: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .message {
+    width: 100%;
+    padding: 15px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .message {
+    width: 425px;
+    float: left;
+    padding: 30px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .message {
+    width: 610px;
+    float: left;
+    padding: 30px 0 0 0;
+  }
+}
+
+/* changes the heading color */
+.container .message h3 {
+  color: #3a0f49;
+}
+
+/* adds padding */
+.container .message p {
+  padding: 2px 0 15px 0;
+}
+
+/* removes text decoration and gives a color */
+.container .message a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* hover effect, changes color */
+.container .message a:hover {
+  color: #e54160;
+  transition: all 0.4s ease;
+}
+
+.container .message span.text {
+  font-weight: 600;
+  color: #e54160;
+}
+
+.container .message span.time {
+  font-weight: 600;
+  color: #e54160;
+}
+
+/* adds padding */
+.container .message p.text {
+  padding: 5px 0 0 0;
+}
+
+/* removes the default list style and makes the display a block */
+.container .message .icons ul {
+  list-style: none;
+  display: block;
+  font-size: 20px;
+}
+
+/* let's the icon display next to each other */
+.container .message .icons ul li {
+  display: inline;
+}
+
+/* the styling for the social icons */
+.container .message .icons ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #3a0f49;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 40px;
+  margin: 5px 6px 0 0;
+  text-align: center;
+}
+
+/* hover effect for the social icons, changes background color and text color in a smooth transition */
+.container .message .icons ul li a:hover {
+  color: #fff;
+  background-color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* all items will be same length and float to the right of the div */
+.container .products {
+  display: inline-flex;
+  float: none;
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+
+/* box class style */
+.container .products .box {
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0 0 20px 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .products {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+
+  .container .products .box {
+    margin: 0;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 0 0 20px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .products {
+    display: inline-flex;
+    float: none;
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+
+  .container .products .box {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 0 0 20px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .products {
+    display: flex;
+    float: right;
+    text-align: center;
+    width: auto;
+    padding: 30px 0 0 0;
+  }
+
+  .container .products .box {
+    text-align: center;
+    width: 160px;
+    margin: 0 0 0 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 0 0 20px 0;
+  }
+}
+
+/* hover effect which will give the box class some shadow */
+.container .products .box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+  transition: all 0.4s ease;
+}
+
+/* some padding for styling */
+.container .products .box .image {
+  padding: 30px 0 5px 0;
+}
+
+/* standard image scale (1) */
+.container .products .box .image img {
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+/* makes image fit with a min width of 481px and max width of 530px */
+@media screen and (min-width: 481px) and (max-width: 530px) {
+  .container .products .box .image img {
+    width: 140px;
+    height: 90px;
+  }
+}
+
+/* when you hover over the image it will zoom in */
+.container .products .box .image:hover img {
+  transform: scale(1.075);
+  transition: transform 1s;
+  transition: all 0.4s ease;
+}
+
+.container .products .box .name {
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 16px;
+  padding: 5px 0 0 0;
+}
+
+/* some styling for price */
+.container .products .box .price {
+  font-size: 18px;
+  padding: 2px 0;
+}
+
+.container .products .box .info {
+  width: 100%;
+}
+
+.container .products .box .info a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* containers the arrow font */
+.container .products .box .info a:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f061";
+  display: inline-block;
+  padding-left: 6px;
+  font-weight: 600;
+  font-size: 75%;
+  transition: all 0.15s ease-in-out;
+}
+
+/* gives the arrow a hover effect */
+.container .products .box .info a:hover {
+  color: #e54160;
+  text-decoration: underline;
+  transition: all 0.4s ease;
+}
+
+/* a hover effect for the arrow */
+.container .products .box .info a:hover:after {
+  transform: translateX(4px);
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+/* display flex, all items will be same length  */
+.container .product {
+  display: flex;
+  padding: 40px 0 0 0;
+}
+
+/* centers the product */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .product {
+    display: flex;
+    padding: 40px 0 0 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container .product {
+    display: flex;
+    padding: 40px 0 0 0;
+    justify-content: center;
+  }
+}
+
+/* some padding for design layout */
+.container .product .wrapper {
+  padding-left: 15px;
+}
+
+/* removes left padding for mobile view*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .product .wrapper {
+    padding: 0;
+  }
+}
+
+/* styles the h1 element to appear bigger and changes the font weight */
+.container .product .wrapper h1 {
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+/* changes font size */
+.container .product .wrapper .price {
+  font-size: 22px;
+  color: #000;
+}
+
+/* changes font size and color */
+.container .product .wrapper h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.container .product .wrapper h4 span.text {
+  color: #e54160;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* changes font size to match the scaling */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .product .wrapper h1 {
+    font-size: 22px;
+  }
+
+  .container .product .wrapper .price {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .product .wrapper h1 {
+    font-size: 24px;
+  }
+
+  .container .product .wrapper .price {
+    font-size: 20px;
+  }
+}
+
+/* adds some padding, better viewing experience */
+.container .product .wrapper .description {
+  padding: 10px 0 5px 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .product .wrapper .description {
+    padding: 10px 0 5px 0;
+  }
+}
+
+.container .product .wrapper .description p {
+  color: #000;
+  margin-bottom: 5px;
+}
+
+/* some styling */
+.container .product .wrapper .description p a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #e54160;
+}
+
+/* hover effect, gives text underline */
+.container .product .wrapper .description p a:hover {
+  text-decoration: underline;
+  transition: all 0.4s ease;
+}
+
+/* removes the default list style */
+.container .product .wrapper .description ul {
+  list-style: none;
+}
+
+/* displays a • before every item in the list item */
+.container .product .wrapper .description ul li:before {
+  content: "• ";
+  color: #000;
+  font-size: 20px;
+}
+
+.container .product .wrapper .description ul li {
+  text-decoration: none;
+  color: #000;
+}
+
+/* responsive photo product mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .product img.sub {
+    width: 310px;
+    height: 194px;
+  }
+
+  .container .product img.main {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .container .product img.sub {
+    width: 400px;
+    height: 250px;
+  }
+
+  .container .product img.main {
+    display: none;
+  }
+}
+
+/* scaling photo a bit down to fit the width */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .container .product img.main {
+    width: 255px;
+    height: 160px;
+  }
+
+  .container .product img.sub {
+    display: none;
+  }
+}
+
+/* photo for tablet view */
+@media screen and (min-width: 768px) {
+  .container .product img.main {
+    width: 400px;
+    height: 250px;
+  }
+
+  .container .product img.sub {
+    display: none;
+  }
+}
+
+/* responsive photo for laptop and desktop view */
+@media screen and (min-width: 1024px) {
+  .container .product img.main {
+    width: 640px;
+    height: 400px;
+  }
+
+  .container .product img.sub {
+    display: none;
+  }
+}
+
+/* displays the form in a column */
+.container .product .wrapper form {
+  display: flex;
+  flex-flow: column;
+  margin: 15px 0px;
+}
+
+/* text field for the quantity when you want to add to your shopping cart */
+.container .product .wrapper form input[type="number"] {
+  width: 278px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: solid 1px #ccc;
+  color: #000;
+  background-color: #f3f4f7;
+  outline: none;
+}
+
+/* submit button */
+.container .product .wrapper form input[type="submit"] {
+  background-color: #3a0f49;
+  border: 0;
+  outline: none;
+  color: #fff;
+  width: 300px;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* hover effect for submit button, changes color */
+.container .product .wrapper form input[type="submit"]:hover {
+  background-color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* heading for the login. displays the  company name and adds some margin top */
+.form .heading {
+  text-align: center;
+  margin: 120px 0 50px;
+  font-size: 30px;
+  color: #3a0f49;
+}
+
+/* responsive view for login */
+@media screen and (min-width: 768px) {
+  .form {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .form .heading {
+    margin: 120px 0 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .form {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+.form .heading .title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* makes the text have a cool look */
+.form .heading .text {
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* gives a bit of styling for the horizontal line */
+.form .heading hr {
+  width: 330px;
+  border: solid 2px #3a0f49;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* making the horizontal line smaller on mobile view to fit */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .form .heading hr {
+    width: 285px;
+  }
+}
+
+/* name input class */
+.form .name {
+  outline: none;
+  width: 300px;
+  display: table;
+  padding: 15px 20px;
+  margin: auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 0 none;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+}
+
+/* email input class */
+.form .email {
+  outline: none;
+  width: 300px;
+  display: table;
+  padding: 15px 20px;
+  margin: 20px auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 0 none;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+}
+
+/* the width expands when you click on the input fiels with a smooth transition */
+.form .name:focus,
+.form .email:focus {
+  color: rgb(113, 127, 136);
+  background-color: #3a0f49;
+  width: 350px;
+  border-radius: 4px;
+  transition: all 0.6s ease;
+}
+
+/* when username or password is not focused it will do a transition effect to return to normal width of the class */
+.form .name:not(focus),
+.form .email:not(focus) {
+  transition: all 0.6s ease;
+}
+
+/* responsive login mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .form {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .form .heading {
+    text-align: center;
+    margin: 120px 0 50px;
+    font-size: 30px;
+    color: #3a0f49;
+  }
+
+  .form .name:focus,
+  .form .email:focus {
+    color: rgb(113, 127, 136);
+    background-color: #3a0f49;
+    width: 85%;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .form {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .form .heading {
+    margin: 150px 0 50px;
+  }
+}
+
+/* scales the width and font size for device between 320px and 375px mobile view */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .form .name,
+  .form .email {
+    width: 80%;
+  }
+
+  .form .heading .text,
+  .form .heading .title {
+    font-size: 28px;
+  }
+}
+
+/* submit button for the form page */
+.form .submit {
+  outline: none;
+  display: table;
+  margin: 40px auto;
+  padding: 10px 0 10px 0;
+  width: 120px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+  border: 0 none;
+}
+
+/* hover effect for submit button */
+.form .submit:hover {
+  outline: none;
+  border-radius: 4px;
+  width: 150px;
+  cursor: pointer;
+  color: rgb(113, 127, 136);
+  background-color: #3a0f49;
+  transition: all 0.4s ease;
+}
+
+/* changes color when the submit button is not being hovered on */
+.form .submit:not(hover) {
+  color: rgb(113, 127, 136);
+  transition: all 0.6s ease;
+}
+
+/* width of the table is 100% of the container class */
+.container .cart table {
+  width: 100%;
+}
+
+/* responsive table structuur for shopping cart mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .cart {
+    overflow-x: auto;
+  }
+
+  .container .cart table {
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container .cart {
+    overflow-x: auto;
+  }
+
+  .container .cart table {
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .cart {
+    overflow-x: auto;
+  }
+
+  .container .cart table {
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .cart table {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container .cart table {
+    width: 100%;
+  }
+}
+
+/* some styling for the table data head */
+.container .cart table thead td {
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2em;
+  color: #3a0f49;
+  font-weight: 500;
+}
+
+/* align the text to the right for the last table data in table head */
+.container .cart table thead td:last-child {
+  text-align: right;
+}
+
+.container .cart table thead td:nth-child(4) {
+  text-align: center;
+}
+
+/* style for the table data in table body */
+.container .cart table tbody td {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+
+/* align the text to the right for the last table data in table body */
+.container .cart table tbody td:last-child {
+  text-align: right;
+}
+
+.container .cart table tbody td span {
+  color: #3a0f49;
+}
+
+.container .cart table tbody td span.text {
+  color: #000;
+}
+
+.container .cart table .img {
+  width: 100px;
+}
+
+/* changes font size and adds some padding top */
+.container .cart table .remove {
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+/* hover effect, text decoration underline */
+.container .cart table .remove:hover {
+  text-decoration: underline;
+  transition: all 0.4s ease;
+}
+
+.container .cart table .description {
+  text-decoration: none;
+}
+
+.container .cart table .quantity {
+  text-align: center;
+}
+
+/* changes font size */
+.container .cart table .price {
+  font-size: 16px;
+}
+
+/* removes the default a element styling */
+.container .cart table a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* hover effect, text decoration underline */
+.container .cart table a:hover {
+  text-decoration: underline;
+  transition: all 0.4s ease;
+}
+
+/* number field to select your quantity */
+.container .cart table input[type="number"] {
+  outline: none;
+  width: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f3f4f7;
+}
+
+/* style for the class subtotal, make it appear cleaner */
+.container .subtotal {
+  text-align: right;
+  padding: 20px 0;
+  color: #000;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .subtotal .text {
+    padding: 15px 0 0 0;
+  }
+}
+
+/* some padding and bigger font size */
+.container .subtotal .text {
+  padding-right: 40px;
+  font-size: 18px;
+}
+
+/* adds a bigger font size */
+.container .subtotal .price {
+  font-size: 18px;
+}
+
+/* positioning the submit buttons */
+.container .buttons {
+  text-align: right;
+  padding-bottom: 30px;
+}
+
+/* submit button, a little bit of styling */
+.container .buttons input[type="submit"] {
+  margin-left: 5px;
+  padding: 12px 20px;
+  border: 0;
+  background-color: #3a0f49;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* hover effect for submit buttons, changes the background color */
+.container .buttons input[type="submit"]:hover {
+  background-color: #e54160;
+  transition: all 0.4s ease;
+}
+
+.container .checkout h1 {
+  display: block;
+  font-weight: normal;
+  margin: 0;
+  padding: 50px 0;
+  font-size: 28px;
+  text-align: center;
+  width: 100%;
+}
+
+.container .checkout p {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container .checkout h1 {
+    padding: 85px 0 50px 0;
+    font-size: 24px;
+  }
+
+  .container .checkout p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container .checkout h1 {
+    font-size: 26px;
+  }
+
+  .container .checkout p {
+    font-size: 22px;
+  }
+}
+
+.checkout-image {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-image img {
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 585px) {
+  .checkout-image img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+/* heading for the login. displays the  company name and adds some margin top */
+.login .heading {
+  text-align: center;
+  margin: 120px 0 50px;
+  font-size: 30px;
+  color: #3a0f49;
+}
+
+/* responsive view for login */
+@media screen and (min-width: 768px) {
+  .login {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .login .heading {
+    margin: 120px 0 50px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .login {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+.login .heading .title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* makes the text have a cool look */
+.login .heading .text {
+  font-size: 35px;
+  letter-spacing: 7px;
+  margin-left: 7px;
+  text-transform: uppercase;
+}
+
+/* gives a bit of styling for the horizontal line */
+.login .heading hr {
+  width: 300px;
+  border: solid 2px #3a0f49;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* username input class */
+.login .username {
+  outline: none;
+  width: 300px;
+  display: table;
+  padding: 15px 20px;
+  margin: auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 0 none;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+}
+
+/* password input class */
+.login .password {
+  outline: none;
+  width: 300px;
+  display: table;
+  padding: 15px 20px;
+  margin: 20px auto;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 0 none;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+}
+
+/* the width expands when you click on the input fiels with a smooth transition */
+.login .username:focus,
+.login .password:focus {
+  color: rgb(113, 127, 136);
+  background-color: #3a0f49;
+  width: 350px;
+  border-radius: 4px;
+  transition: all 0.6s ease;
+}
+
+/* when username or password is not focused it will do a transition effect to return to normal width of the class */
+.login .username:not(focus),
+.login .password:not(focus) {
+  transition: all 0.6s ease;
+}
+
+/* responsive login mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .login {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .login .heading {
+    text-align: center;
+    margin: 120px 0 50px;
+    font-size: 30px;
+    color: #3a0f49;
+  }
+
+  .login .username:focus,
+  .login .password:focus {
+    color: rgb(113, 127, 136);
+    background-color: #3a0f49;
+    width: 85%;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .login .heading {
+    margin: 150px 0 50px;
+  }
+}
+
+.login .option {
+  width: 300px;
+  margin: auto;
+}
+
+/* scales the width and font size for device between 320px and 375px mobile view */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .login .username,
+  .login .password,
+  .login .option {
+    width: 75%;
+  }
+
+  .login .heading hr {
+    width: 250px;
+  }
+
+  .login .heading .text,
+  .login .heading .title {
+    font-size: 28px;
+  }
+}
+
+.login .option .remembercheck {
+  margin-top: 4px;
+  margin-left: -20px;
+  float: left;
+  outline: none;
+}
+
+/* hover effect, curos becomes pointer */
+.login .option .remembercheck:hover {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* text color */
+.login .option .remembertext {
+  color: rgb(113, 127, 136);
+}
+
+.login .option .return {
+  float: right;
+  margin-right: -20px;
+  color: rgb(113, 127, 136);
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+/* removes the default a element style */
+.login .option .return a {
+  text-decoration: none;
+  color: rgb(113, 127, 136);
+}
+
+/* hover effect for when you want to return to home page, gives the text underline effect and makes your cursor pointer */
+.login .option .return a:hover {
+  color: rgb(113, 127, 136);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* submit button for the login page */
+.login .submit {
+  outline: none;
+  display: table;
+  margin: 40px auto;
+  padding: 10px 0 10px 0;
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #3a0f49;
+  color: rgb(113, 127, 136);
+  border-radius: 4px;
+  border: 0 none;
+}
+
+/* hover effect for submit button */
+.login .submit:hover {
+  outline: none;
+  border-radius: 4px;
+  width: 120px;
+  cursor: pointer;
+  color: rgb(113, 127, 136);
+  background-color: #3a0f49;
+  transition: all 0.4s ease;
+}
+
+/* changes color when the submit button is not being hovered on */
+.login .submit:not(hover) {
+  color: rgb(113, 127, 136);
+  transition: all 0.6s ease;
+}
+
+/* 100% height */
+.content {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* styling for the h2 element */
+.content h2 {
+  padding: 25px 0;
+  font-size: 22px;
+  border-bottom: 1px solid #e0e0e3;
+  color: #3a0f49;
+}
+
+/* responsive container for admin panel mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content {
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    padding: 85px 0 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #3a0f49;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: 95%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .content {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* mborijnland mini icon, mainly for design purpose */
+.content h2:before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 22px;
+  border-left: 5px solid #e54160;
+  border-right: 5px solid #e54160;
+  transform: skew(-19.5deg);
+  margin: 0px 8px -3px 5px;
+}
+
+/* mini container for all the links and text */
+.content .box {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  padding: 25px;
+  background-color: #fff;
+}
+
+/* clears all the padding and margin from previous style */
+.content .box .product,
+.content .box .order,
+.content .box .openinghour {
+  padding: 0;
+  margin: 0;
+}
+
+/* style for the a element, make it look cleaner */
+.content .box .product a,
+.content .box .order a,
+.content .box .openinghour a {
+  text-decoration: none;
+  color: #3a0f49;
+  font-weight: 700;
+}
+
+/* hover effects which will change color */
+.content .box .product a:hover,
+.content .box .order a:hover,
+.content .box .openinghour a:hover {
+  color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* container which will display your account information */
+.content .profile {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.content .profile p table td,
+.content .profile table td {
+  padding: 5px;
+}
+
+/* only applies to first table data  */
+.content .profile p table td:first-child,
+.content .profile table td:first-child {
+  font-weight: bold;
+  color: #3a0f49;
+  padding-right: 15px;
+}
+
+/* table display to contain the product information which will be displayed */
+.content .list table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+}
+
+/* responsive product list mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content .list {
+    overflow-x: auto;
+  }
+
+  .content .list table {
+    width: 600px;
+  }
+}
+
+.content .list table thead {
+  background-color: #ebeef1;
+  border-top: 1px solid #e0e0e3;
+  border-bottom: 1px solid #e0e0e3;
+}
+
+.content .list table thead tr {
+  text-align: left;
+}
+
+.content .list table thead tr th {
+  padding: 5px 10px;
+}
+
+.content .list table tbody tr {
+  border-bottom: 1px solid #e0e0e3;
+}
+
+.content .list table tbody tr:nth-child(even) {
+  background-color: #fbfcfc;
+}
+
+/* hover effect to highlight which product your mouse hovering over */
+.content .list table tbody tr:hover {
+  background-color: #3a0f49;
+  transition: all 0.4s ease;
+}
+
+.content .list table tbody tr:hover td {
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.content .list table tbody tr:hover td:nth-child(1) {
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+/* gives more space between each row */
+.content .list table tbody tr td {
+  padding: 10px;
+}
+
+.content .list table tbody tr td:nth-child(1) {
+  color: #a5a7a9;
+}
+
+.content .list table tbody tr td a {
+  text-decoration: none;
+  color: #3a0f49;
+}
+
+/* hover effect changes color to white */
+.content .list table tbody tr:hover a {
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.content .list table tbody tr a:hover {
+  color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* changes the style of input type text when hover */
+.content .list table tbody tr:hover input[type="text"] {
+  color: #fff;
+  border: solid 1px #999;
+  transition: all 0.4s ease;
+}
+
+/* the input fields for text values are changes for style */
+.content .list table tbody tr td input[type="text"] {
+  outline: none;
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: transparent;
+}
+
+/* input fields number value for quantity.php */
+.content .list table tbody tr td input[type="number"] {
+  outline: none;
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: transparent;
+}
+
+/* hover style */
+.content .list table tbody tr:hover input[type="number"] {
+  color: #fff;
+  border: solid 1px #999;
+  transition: all 0.4s ease;
+}
+
+/* custom style for submit button */
+.content .update input[type="submit"] {
+  float: right;
+  margin: 20px 0;
+  padding: 10px;
+  border: 0;
+  width: 200px;
+  font-size: 14px;
+  background-color: #3a0f49;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Makes the button bigger for mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content .update input[type="submit"] {
+    width: 100%;
+    float: none;
+  }
+}
+
+.content .orders table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+}
+
+/* responsive product list mobile view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content .orders {
+    overflow-x: auto;
+  }
+
+  .content .orders table {
+    width: 600px;
+  }
+}
+
+.content .orders table thead {
+  background-color: #ebeef1;
+  border-top: 1px solid #e0e0e3;
+  border-bottom: 1px solid #e0e0e3;
+}
+
+.content .orders table thead tr {
+  text-align: left;
+}
+
+.content .orders table thead tr th {
+  padding: 5px 10px;
+}
+
+.content .orders table tbody tr {
+  border-bottom: 1px solid #e0e0e3;
+}
+
+.content .orders table tbody tr:nth-child(even) {
+  background-color: #fbfcfc;
+}
+
+/* hover effect to highlight which product your mouse hovering over */
+.content .orders table tbody tr:hover {
+  background-color: #3a0f49;
+  transition: all 0.4s ease;
+}
+
+.content .orders table tbody tr:hover td {
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.content .orders table tbody tr:hover td:nth-child(1) {
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+/* gives more space between each row */
+.content .orders table tbody tr td {
+  padding: 10px;
+}
+
+.content .orders table tbody tr td:nth-child(1) {
+  color: #a5a7a9;
+}
+
+.content .form {
+  width: 100%;
+  height: 80px;
+}
+
+.content .form input[type="submit"].reset {
+  float: right;
+  margin: 20px 0;
+  padding: 10px;
+  border: 0;
+  width: 200px;
+  font-size: 14px;
+  background-color: #3a0f49;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content .form input[type="submit"].reset {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* mini container for the opening hours text field, submit button and update message */
+.content .time {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.content .time table td {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.content .time table td:first-child {
+  font-weight: 500;
+  color: #3a0f49;
+}
+
+.content .time .update {
+  padding: 5px;
+  font-weight: 600;
+}
+
+/* text field to write the new openinghours  */
+.content .time input[type="text"] {
+  outline: none;
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* submit button to execute the update query for opening hours */
+.content .time input[type="submit"] {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  font-size: 14px;
+  background-color: #3a0f49;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* submit button hover effect */
+.content .time input[type="submit"]:hover {
+  background-color: #e54160;
+  transition: all 0.4s ease;
+}
+
+/* keeps the copyright always bottom on the page */
+.copyright {
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  position: absolute;
+}
+
+/* responsive mobile view for footer/copyright */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .copyright {
+    left: 50%;
+    transform: translate(-50%);
+    width: 95%;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .copyright {
+    left: 50%;
+    transform: translate(-50%);
+    width: 95%;
+    position: relative;
+  }
+}
+
+/* copyright text style */
+.copyright p {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: #3a0f49;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 319px) {
+  * {
+    display: none;
+  }
+}

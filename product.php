@@ -20,40 +20,65 @@ if (isset($_GET['id'])) {
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?=$product['name']?> - Bakkerij Leiden</title>
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />  
+  <script src="assets/js/main.js"></script> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
 </head>
 <body>
 
-<!-- Main header. Contains the shopping cart and admin login. -->
-<header class="main">
+<!-- Navigation. -->
+<header class="nav">
+  <!-- Navigation items. -->
   <div class="item">
-    <h1><a href="index.php">Bakkerij Leiden</a></h1>
-    <a href="admin/login.php"><i class="fas fa-users"></i>Admin</a>
-    <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Winkelwagen</a>
+    <h1><a href="index.php?page=home">Bakkerij Leiden</a></h1>
+    <a class="main" href="login.php"><i class="fas fa-users"></i>Admin</a>
+    <a class="main" href="index.php?page=cart"><i class="fas fa-shopping-cart"></i>Winkelwagen</a>
+    <a class="sub" href="javascript:void(0);" onclick="dropdownmenu()"><i class="fa fa-bars"></i></a>
+  </div>
+  <!-- Mobile view navigation. -->
+  <div class="menu">
+    <div id="links">
+      <a href="login.php"><i class="fas fa-users"></i> Admin</a>
+      <a href="index.php?page=cart"><i class="fas fa-shopping-cart"></i> Winkelwagen</a>
+    </div>
   </div>
 </header>
+<!-- End of container. -->
 
 <!-- Container for the display of the products. -->
 <div class="container">
-  <h2>Product</h2>
+  <h2>Producten</h2>
+  <!-- Product container. -->
   <div class="product">
-    <img src="imgs/<?=$product['img']?>" width="500" height="400" alt="<?=$product['name']?>">
+    <!-- Image of product. -->
+    <img src="assets/img/<?=$product['img']?>" alt="<?=$product['name']?>" class="main">
     <div class="wrapper">
+    <img src="assets/img/<?=$product['img']?>" alt="<?=$product['name']?>" class="sub">
+      <!-- Title of the product. -->
       <h1><?=$product['name']?></h1>
+      <!-- Price in euro's. -->
       <span class="price">&euro;<?=$product['price']?></span>
+      <!-- Displays quantity of the product. -->
+      <h4>Er zijn <span class="text"><?=$product['quantity']?></span> verrassingspakketten op voorraad</h4>
+      <!-- Description of the product. -->
       <div class="description"><?=$product['desc']?></div>
+        <!-- Form. -->
         <form action="index.php?page=cart" method="post">
           <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
           <input type="hidden" name="product_id" value="<?=$product['id']?>">
-          <input type="submit" value="Add To Cart">
+          <input type="submit" value="Toevoegen aan winkelwagen">
         </form>
+        <!-- End of form. -->
+      </div>
+      <!-- End of wrapper. -->
     </div>
+    <!-- End of product container. -->
   </div>
+  <!-- End of container. -->
 </div>
 
 <!-- Copyright -->
@@ -63,3 +88,4 @@ if (isset($_GET['id'])) {
 
 </body>
 </html>
+
